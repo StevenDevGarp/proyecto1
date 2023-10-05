@@ -24,7 +24,6 @@ void ingresarDatosNotas(){
 };
 void ingresarPagos(){
     cout << "hola ingresa datos";
-    cout << "A mi Todos me la Pelan";
 };	
 
 // Funciones para la impresión de datos
@@ -219,4 +218,94 @@ int main()
 	system ("PAUSE");
 	return 0;
 }
+
+//PENDIENTE DE AGREGAR EN LOS INGRESO DE DATOS
+int banco;
+string nombreBanco;
+float totalinscripcion = 800.00;
+
+struct boleta
+{
+	string fecha;
+	string alumno;
+	string semestre;
+	string campus;
+} blt;
+
+struct alumno
+{
+	char carnet[13];
+	string nombre;
+	string apellido;
+	string nacimiento;
+	char edad[2];
+	string direccion;
+	char telefono[9];
+	string correo;
+	string profesion;
+	int graduacion;
+} alum;
+
+int main()
+{
+	cout << "Ingrese la Fecha de la Boleta: ";
+	getline(cin,blt.fecha);
+	cout << "Ingrese el Nombre del Alumno: ";
+	getline(cin,blt.alumno);
+	cout << "Ingrese el Semestre: ";
+	cin >> blt.semestre;
+	cout << "Ingrese el Campus de Estudio: ";
+	cin >> blt.campus;
+	cout << "Seleccione un Banco para Efectuar el Pago: 1.Banco G&T\t 2.Banco Industrial\n";
+	cin >> banco;
+		if (banco==1){
+			nombreBanco = "Banco G&T";
+		}
+			else if(banco==2){
+				nombreBanco = "Banco Industrial";
+			}
+				else {cout << "Ingrese un Banco Valido";
+				};
+				
+	//ESTO SE USARA PARA IMPRESION DE DATOS//
+	cout << "\nLa Fecha de la Boleta Es: " << blt.fecha <<endl;
+	cout << "El Nombre del Alumno Es: " << blt.alumno <<endl;
+	cout << "Semestre No: " << blt.semestre <<endl;
+	cout << "Campus: " << blt.campus <<endl;
+	cout << "El Banco a Pagar Es: " <<nombreBanco<<endl;
+	cout << "El Total de Inscripcion Es: " << totalinscripcion <<endl;
+	
+	//ESTO SE USA PARA EL INGRESO DE DATOS//
+	cout << "\nIngrese su Carnet: ";
+	getline(cin,alum.carnet);
+	cout << "Ingrese sus Nombres: ";
+	getline(cin,alum.nombre);
+	cout << "Ingrese sus Apellidos: ";
+	getline(cin,alum.apellido);
+	cout << "Ingrese su Fecha de Nacimiento: ";
+	getline(cin,alum.nacimiento);
+	cout << "Ingrese su Edad: ";
+	cin >> alum.edad;
+	cout << "Ingrese su Direccion: ";
+	getline(cin,alum.direccion);
+	cout << "Ingrese su Numero de Telefono: ";
+	cin >> alum.telefono;
+	cout << "Ingrese su Correo Electronico: ";
+	getline(cin,alum.correo);
+	cout << "Ingrese su Profesion de Divirsificado: ";
+	getline(cin,alum.profesion);
+	cout << "Ingrese El Anio que se Graduo: ";
+	cin >> alum.graduacion; 
+		
+	//ESTO SE USARA PARA IMPRESION DE DATOS//
+	cout << "\nLa Su Numero de Carnet Es: " << alum.carnet <<endl;
+	cout << "Sus Nombre Son: " << alum.nombre <<endl;
+	cout << "Sus Apellidos Son: " << alum.apellido <<endl;
+	cout << "Campus: " << alum.nacimiento <<endl;
+	cout << "Su Edad Es: " << alum.edad <<endl;
+	cout << "Su Direccion Es: " << alum.direccion <<endl;
+	cout << "Su Numero de Telefono Es: " << alum.telefono <<endl;
+	cout << "Su Direccion de Correo Electronico Es: " << alum.correo <<endl;
+	cout << "Su Profesion de Diversificado Es: " << alum.profesion <<endl;
+	cout << "El Anio que se Graduo Es: " << alum.graduacion <<endl;
 
