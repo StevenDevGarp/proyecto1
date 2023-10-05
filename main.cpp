@@ -8,23 +8,24 @@ using namespace std;
 	
 // Funciones para el ingreso de datos	
 void ingresarDatosBoletaInscripcion(){
-    cout << "hosa ingresa datos";
+    cout << "hola ingresa datos";
 };
 void ingresarDatosAlumnos(){
-    cout << "hosa ingresa datos";
+    cout << "hola ingresa datos";
 };
 void ingresarDatosCursos(){
-    cout << "hosa ingresa datos";
+    cout << "hola ingresa datos";
 };
 void ingresarDatosCatedraticos(){
-    cout << "hosa ingresa datos";
+    cout << "hola ingresa datos";
 };
 void ingresarDatosNotas(){
-    cout << "hosa ingresa datos";
+    cout << "hola ingresa datos";
 };
 void ingresarPagos(){
-    cout << "hosa ingresa datos";
-};
+    cout << "hola ingresa datos";
+    cout << "A mi Todos me la Pelan";
+};	
 
 // Funciones para la impresión de datos
 void imprimirBoletaPago();
