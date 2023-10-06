@@ -33,6 +33,8 @@ struct alumno
 } alum;
 
 void ingresarDatos();
+void menuProceso();
+int main();
 		
 // Funciones para el ingreso de datos	
 void ingresarDatosBoletaInscripcion(){
@@ -100,7 +102,7 @@ void ingresarPagos(){
 };	
 
 // Funciones para la impresión de datos
-void imprimirBoletaPago();
+void imprimirBoletaPago(){
 	cout << "\nLa Fecha de la Boleta Es: " << blt.fecha <<endl;
 	cout << "El Nombre del Alumno Es: " << blt.alumno <<endl;
 	cout << "Semestre No: " << blt.semestre <<endl;
@@ -108,12 +110,23 @@ void imprimirBoletaPago();
 	cout << "El Banco a Pagar Es: " <<nombreBanco<<endl;
 	cout << "El Total de Inscripcion Es: " << totalinscripcion <<endl;
 	cin.ignore();
-void imprimirTalonarioPagos();
-void imprimirPensumEstudios();
-void imprimirCursosPorSemestre();
-void imprimirNotasPorAlumno();
-void imprimirNotasPorSemestre();
-void imprimirAlumnosInscritos();
+};
+void imprimirTalonarioPagos(){
+	cout <<"hola mundo";
+};
+void imprimirPensumEstudios(){
+	cout <<"hola mundo";
+};
+void imprimirCursosPorSemestre(){
+	cout <<"hola mundo";
+};
+void imprimirNotasPorAlumno(){
+	cout <<"hola mundo";
+};
+void imprimirNotasPorSemestre(){
+	cout <<"hola mundo";
+};
+void imprimirAlumnosInscritos(){
 	cout << "\nLa Su Numero de Carnet Es: " << alum.carnet <<endl;
 	cout << "Sus Nombre Es: " << alum.nombre << alum.apellido <<endl;
 	cout << "Su Fecha de Nacimiento Es: " << alum.nacimiento <<endl;
@@ -123,10 +136,19 @@ void imprimirAlumnosInscritos();
 	cout << "Su Direccion de Correo Electronico Es: " << alum.correo <<endl;
 	cout << "Su Profesion de Diversificado Es: " << alum.profesion <<endl;
 	cout << "El Anio que se Graduo Es: " << alum.graduacion <<endl;
-void imprimirCursosAprobados();
-void imprimirCursosReprobados();
-void imprimirPagosYDeudas();
-void imprimirMejoresPromedios();
+};
+void imprimirCursosAprobados(){
+	cout <<"hola mundo";
+};
+void imprimirCursosReprobados(){
+	cout <<"hola mundo";
+};
+void imprimirPagosYDeudas(){
+	cout <<"hola mundo";
+};
+void imprimirMejoresPromedios(){
+	cout <<"hola mundo";
+};
 	
 	
 
@@ -165,7 +187,8 @@ void ingresarDatos(){
             ingresarPagos();
             break;
         case 7:
-        	//menuProceso();
+        	system("cls");
+        	menuProceso();
             break;
 };
 
@@ -196,8 +219,9 @@ void menuProceso(){
 			imprimirDatos();
 			break;
 		case 3:
-			cout<< "\n\tMenu de Carreras\n";
-			//carreras;
+			
+			system("cls");
+			main();
 			break;
 	}
 	
