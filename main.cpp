@@ -54,11 +54,11 @@ void ingresarDatosBoletaInscripcion(){
 				nombreBanco = "Banco Industrial";
 			}else {cout << "Ingrese un Banco Valido";};
 	system("cls");
-	cout << "Ingreso de datos completado con exito\n\n";
+	cout << "!Ingreso de Datos Completado con Exito!\n\n";
 	ingresarDatos();
 };
 void ingresarDatosAlumnos(){
-    cout << "\n\Por Favor Ingrese los Datos del Alumno";
+    cout << "\nPor Favor Ingrese los Datos del Alumno";
     cin.ignore();
     cout << "\nIngrese su Carnet: ";
 	getline(cin,alum.carnet);
@@ -81,7 +81,10 @@ void ingresarDatosAlumnos(){
 	cout << "Ingrese su Profesion de Divirsificado: ";
 	getline(cin,alum.profesion);
 	cout << "Ingrese El Anio que se Graduo: ";
-	cin >> alum.graduacion; 
+	cin >> alum.graduacion;
+	system("cls");
+	cout << "!Ingreso de Datos Completado con Exito!\n\n";
+	ingresarDatos(); 
 };
 void ingresarDatosCursos(){
     cout << "hola ingresa datos";
@@ -98,16 +101,33 @@ void ingresarPagos(){
 
 // Funciones para la impresión de datos
 void imprimirBoletaPago();
+	cout << "\nLa Fecha de la Boleta Es: " << blt.fecha <<endl;
+	cout << "El Nombre del Alumno Es: " << blt.alumno <<endl;
+	cout << "Semestre No: " << blt.semestre <<endl;
+	cout << "Campus: " << blt.campus <<endl;
+	cout << "El Banco a Pagar Es: " <<nombreBanco<<endl;
+	cout << "El Total de Inscripcion Es: " << totalinscripcion <<endl;
+	cin.ignore();
 void imprimirTalonarioPagos();
 void imprimirPensumEstudios();
 void imprimirCursosPorSemestre();
 void imprimirNotasPorAlumno();
 void imprimirNotasPorSemestre();
 void imprimirAlumnosInscritos();
+	cout << "\nLa Su Numero de Carnet Es: " << alum.carnet <<endl;
+	cout << "Sus Nombre Es: " << alum.nombre << alum.apellido <<endl;
+	cout << "Su Fecha de Nacimiento Es: " << alum.nacimiento <<endl;
+	cout << "Su Edad Es: " << alum.edad <<endl;
+	cout << "Su Direccion Es: " << alum.direccion <<endl;
+	cout << "Su Numero de Telefono Es: " << alum.telefono <<endl;
+	cout << "Su Direccion de Correo Electronico Es: " << alum.correo <<endl;
+	cout << "Su Profesion de Diversificado Es: " << alum.profesion <<endl;
+	cout << "El Anio que se Graduo Es: " << alum.graduacion <<endl;
 void imprimirCursosAprobados();
 void imprimirCursosReprobados();
 void imprimirPagosYDeudas();
-void imprimirMejoresPromedios();	
+void imprimirMejoresPromedios();
+	
 	
 
 //Funciones principales;
@@ -145,7 +165,7 @@ void ingresarDatos(){
             ingresarPagos();
             break;
         case 7:
-
+        	//menuProceso();
             break;
 };
 
@@ -173,11 +193,11 @@ void menuProceso(){
 			break;
 		case 2:
 			cout<< "\n\tImpresion de Datos\n";
-			//imprimirDatos();
+			imprimirDatos();
 			break;
 		case 3:
-			cout<< "\n\tRegresar al Menu Anterior\n";
-			//regresarMenu();
+			cout<< "\n\tMenu de Carreras\n";
+			//carreras;
 			break;
 	}
 	
@@ -195,7 +215,7 @@ string departementosMenu(){
         "21:Totonicapan","22:Zacapa",
     };
     
-    for (int i = 0; i<=21 ; i++){
+    for (int i = 0; i<=22 ; i++){
 		cout << departamentos[i] << endl;
 	}
 
