@@ -32,6 +32,7 @@ struct alumno
 	int graduacion;
 } alum;
 
+void ingresarDatos();
 		
 // Funciones para el ingreso de datos	
 void ingresarDatosBoletaInscripcion(){
@@ -49,12 +50,12 @@ void ingresarDatosBoletaInscripcion(){
 	cin >> banco;
 		if (banco==1){
 			nombreBanco = "Banco G&T";
-		}
-			else if(banco==2){
+		} else if(banco==2) {
 				nombreBanco = "Banco Industrial";
-			}
-				else {cout << "Ingrese un Banco Valido";
-				};
+			}else {cout << "Ingrese un Banco Valido";};
+	system("cls");
+	cout << "Ingreso de datos completado con exito\n\n";
+	ingresarDatos();
 };
 void ingresarDatosAlumnos(){
     cout << "\n\Por Favor Ingrese los Datos del Alumno";
