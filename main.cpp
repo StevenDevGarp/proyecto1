@@ -2,6 +2,7 @@
 #include <string>
 #include <stdlib.h>
 #include <conio.h>
+#include <vector>
 
 using namespace std;
 int banco;
@@ -223,19 +224,44 @@ void imprimirBoletaPago(){
 	cin.ignore();
 };
 void imprimirTalonarioPagos(){
-	cout <<"hola mundo";
+	cout << "\n\tPor Favor Ingrese los Datos de los Pagos\n";
+    cin.ignore();
+    cout << "\nIngrese el Codigo de Pago: ";
+    cin >> pag.cod_pago;
+	cin.ignore();
+    cout << "Ingrese el Nombre de Pago: ";
+    getline(cin,pag.nom_pago);
+    cout << "Ingrese el Codigo del Alumno: ";
+    getline(cin,pag.cod_alum);
+    cout << "Ingrese la Facultad: ";
+    getline(cin,pag.facultad);
+    cout << "Ingrese el Semestre: ";
+    cin >> pag.semestre;
+    cout << "Ingrese la Cuota de Pago: ";
+    cin >> pag.cuota_pago;
+    cout << "!Ingreso de Datos Completado con Exito!\n\n";
+    ingresarDatos();
 };
 void imprimirPensumEstudios(){
-	cout <<"hola mundo";
+	cout <<"\n1. Matematica Discreta\n" <<endl;
+	cout <<"\n2. Contabilidad\n" << endl;
+	cout <<"\n3. Precalculo\n" << endl;
+	cout <<"\n4. Algoritmos\n" << endl;
+	cout <<"\n5. Algebra Lineal\n" << endl;
 };
 void imprimirCursosPorSemestre(){
-	cout <<"hola mundo";
+	cout <<"\n\nLos cursos por semestre a impartir son: ¡5!\n" <<endl;
 };
 void imprimirNotasPorAlumno(){
-	cout <<"hola mundo";
+	cout <<"El carne del alumno es:" << notas.carne <<endl;
+	cout <<"El codigo del curso es:" << notas.cod_curso <<endl;
+	cout <<"La nota en el primer parcial es de:"<< notas.punt_par1 <<endl;
+	cout <<"La nota en el segundo parcial es de:" << notas.punt_par2 <<endl;
+	cout <<"La zona (examenes cortos, proyectos, tareas) del alumno es:" << notas.zona<< endl;
 };
 void imprimirNotasPorSemestre(){
-	cout <<"hola mundo";
+	cout <<"Por el momento no podemos mostrar sus notas, regrese mas tarde." <<endl;
+	cout <<"Gracias por su comprension" <<endl;
 };
 void imprimirAlumnosInscritos(){
 	cout << "\nLa Su Numero de Carnet Es: " << alum.carnet <<endl;
@@ -249,16 +275,20 @@ void imprimirAlumnosInscritos(){
 	cout << "El Anio que se Graduo Es: " << alum.graduacion <<endl;
 };
 void imprimirCursosAprobados(){
-	cout <<"hola mundo";
+	cout <<"\nHemos tenido una falla en el sistema, le mostraremos los cursos aprobados mas tarde.\n" <<endl;
+	cout <<"Gracias por su comprension" <<endl;
 };
 void imprimirCursosReprobados(){
-	cout <<"hola mundo";
+	cout <<"\nHemos tenido una falla en el sistema, le mostraremos los cursos reprobados mas tarde.\n";
+	cout <<"Gracias por su comprension" <<endl;
 };
 void imprimirPagosYDeudas(){
-	cout <<"hola mundo";
+	cout <<"\nSemestres que ha pagado:\n" << pag.semestre <<endl;
+	cout <<"Los semestres que no aparecen anteriormente estan pendientes de Pago." <<endl;
 };
 void imprimirMejoresPromedios(){
-	cout <<"hola mundo";
+	cout <<"No es posible mostrar esta informacion por el momento, regrese mas tarde" << endl;
+	cout <<"Gracias por su comprension" <<endl;
 };
 	
 	
@@ -325,69 +355,70 @@ void imprimirDatos(){
 
 	switch(imprimir){
 		case 1:
-			cout << "\n\t¡Sus Datos se an Impreso con Exito!";
+			cout << "\n\t¡Sus Datos se han Impreso con Exito!";
 			imprimirBoletaPago();
 			imprimirDatos();
 			break;
 		case 2:
-			cout << "\n\t¡Sus Datos se an Impreso con Exito!";
-			
+			cout << "\n\t¡Sus Datos se han Impreso con Exito!";
+			imprimirTalonarioPagos();
 			imprimirDatos();
 			break;
 		case 3:
-			cout << "\n\t¡Sus Datos se an Impreso con Exito!";
-			
+			cout << "\n\t¡Sus Datos se han Impreso con Exito!";
+			imprimirPensumEstudios();
 			imprimirDatos();
 			break;
 		case 4:
-			cout << "\n\t¡Sus Datos se an Impreso con Exito!";
-			
+			cout << "\n\t¡Sus Datos se han Impreso con Exito!";
+			imprimirCursosPorSemestre();
 			imprimirDatos();
 			break;
 		case 5:
-			cout << "\n\t¡Sus Datos se an Impreso con Exito!";
-			
+			cout << "\n\t¡Sus Datos se han Impreso con Exito!";
+			imprimirNotasPorAlumno();
 			imprimirDatos();
 			break;
 		case 6:
 			cout << "\n\t¡Sus Datos se an Impreso con Exito!";
-			
+			imprimirAlumnosInscritos();
 			imprimirDatos();
 			break;
 		case 7:
-			cout << "\n\t¡Sus Datos se an Impreso con Exito!";
-			
+			cout << "\n\t¡Sus Datos se han Impreso con Exito!";
+			imprimirCursosAprobados();
 			imprimirDatos();
 			break;
 		case 8:
-			cout << "\n\t¡Sus Datos se an Impreso con Exito!";
-			
+			cout << "\n\t¡Sus Datos se han Impreso con Exito!";
+		    imprimirCursosReprobados();
 			imprimirDatos();
 			break;
 		case 9:
-			cout << "\n\t¡Sus Datos se an Impreso con Exito!";
-			
+			cout << "\n\t¡Sus Datos se han Impreso con Exito!";
+		    imprimirPagosYDeudas();
 			imprimirDatos();
 			break;
 		case 10:
-			cout << "\n\t¡Sus Datos se an Impreso con Exito!";
-			
+			cout << "\n\t¡Sus Datos se han Impreso con Exito!";
+		    imprimirMejoresPromedios();
 			imprimirDatos();
 			break;
 		case 11:
 			menuProceso();
+			break;
 	};
-};
-void regresarMenu(){
 };
 
 void menuProceso(){
 	int process =0;
-	cout<<"\n\tElija el Proceso Que Desea Realizar\n";
-	cout<< "\n1.Ingreso de Datos\n";
-	cout<< "2.Impresion de Datos\n";
-	cout<< "3.Regresar al Menu de Carreras\n";
-	cout<< "\nProceso a Realizar: ";
+	cout << "\n\tElija el Proceso Que Desea Realizar\n";
+	cout << "\n1.Ingreso de Datos\n";
+	cout << "2.Impresion de Datos\n";
+	cout << "3.Regresar al Menu de Carreras\n";
+	cout << "4.Colaboradores\n";
+	cout << "5.Salir\n";
+	cout << "\nProceso a Realizar: ";
 	cin >> process;
 	
 	switch(process){
@@ -403,8 +434,24 @@ void menuProceso(){
 			system("cls");
 			main();
 			break;
+		case 4:
+			system("cls");
+			cout << "\t\tUn Paso Hacia Delante" << endl;
+			cout << "\t\tColaboradores" << endl;
+			cout << "\n\t\tMarlon Josue Castillo Garcia";
+			cout << "\n\t\tDany Miguel Mateo Hernandez";
+			cout << "\n\t\tAbraham Isaac Lima Castillo";
+			cout << "\n\t\tLaura Carolina Portillo Portillo";
+			cout << "\n\t\tDilan Stihv Zepeda Bernal";
+			cout << "\n\t\tVielman Amado Garcia Galvez: Ya no Asiste" << endl;
+			cout << "\nGracias por Utilizar Nuestro Sotware !GRANITO DE ARENA¡";
+			cin.get(); cin.get();
+			menuProceso();
+			system("cls");
+			break;
+		case 5:
+			exit(0);
 	}
-	
 };
 
 string departementosMenu(){
@@ -436,6 +483,66 @@ string departementosMenu(){
 	
 int main()
 {
+	vector<string> colaboradores;
+	vector<string> claves;
+	
+	//Se añaden usuarios al Vector
+	colaboradores.push_back("Marlon");
+	colaboradores.push_back("Dany");
+	colaboradores.push_back("Abraham");
+	
+	//Se añaden las claves al Vector
+	claves.push_back("MC32057881");
+	claves.push_back("Dany123");
+	claves.push_back("Lima123");
+	
+	string usuarios,password;
+	int contador = 0;
+	bool ingresa = false;
+	do {
+		system("cls");
+		cout << "\t\t---------------------------------" << endl;
+		cout << "\t\t--Por Favor Ingrese su Usuario---" << endl;
+		cout << "\t\t---------------------------------" << endl;
+		cout << "\t\tUSUARIO: ";
+		getline(cin,usuarios);
+		cout << "\t\tPassword: ";
+		
+		char pass;
+		pass = getch();
+		password = "";
+		while (pass != 13){
+			if (pass != 8){
+			password.push_back(pass);
+			cout << "*";
+			} else{
+				if (password.length() > 0){
+				cout << "\b \b";
+				password = password.substr(0, password.length() -1);
+				}
+				}
+			pass = getch();
+		}
+		for (int i = 0; i < colaboradores.size(); i++){
+			if (colaboradores[i] == usuarios && claves[i] == password){
+				ingresa = true;
+				system("cls");
+				break;
+			}
+		}
+		if (!ingresa){
+			cout << "\n\t\tEl Usuario y el Password son Incorrectos" << endl;
+				cin.get();
+				contador++;
+		}
+		
+	} while(ingresa == false && contador < 3);
+	
+	if (ingresa == false){
+		cout << "\n\t¡Usted No es un Colaborador!, Cerrando Programa..." << endl;
+		exit(0);
+	}
+	
 	//array con las carreras
 	string carreras[11]={"\n1.Ingenieria en Sistemas","2.Ingenieria Industrial","3.Ingenieria Civil","4.Arquitectura","5.Medicina",
 	"6.Psicologia","7.Derecho","8.Auditoria","9.Criminologia","10.Trabajo Social","11.Salir"};
